@@ -11,6 +11,7 @@ export default function AddBookForm() {
         type="text"
         placeholder="Author"
       />
+      <button type="submit">Add Book</button>
     </form>
   );
 }
