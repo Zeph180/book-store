@@ -10,7 +10,11 @@ export default function AddBookForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addBook({ title, author }));
+    if (title && author) {
+      dispatch(addBook({ title, author }));
+    } else {
+      alert('Fields can not be empty');
+    }
     setAuthor('');
     setTitle('');
   };
