@@ -19,7 +19,7 @@ export default function Books() {
           <li key={book.title + 2}>
             {book.title}
             {' '}
-            <button type="button" onClick={() => handleRemove(book.id)}>Remove</button>
+            <button type="button" onClick={() => handleRemove(book.item_id)}>Remove</button>
           </li>
         ))}
       </ul>
