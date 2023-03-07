@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/features/book/bookSlice';
+import { addBookAsync } from '../redux/features/book/bookSlice';
 
 export default function AddBookForm() {
   const [title, setTitle] = useState('');
@@ -11,7 +11,9 @@ export default function AddBookForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title && author) {
-      dispatch(addBook({ title, author }));
+      dispatch(addBookAsync({
+        title, author, item_id: () => crypto.randomUUID(), category: 'fictipon',
+      }));
     } else {
       alert('Fields can not be empty');
     }
