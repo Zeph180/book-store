@@ -12,7 +12,7 @@ export default function AddBookForm() {
     e.preventDefault();
     if (title && author) {
       dispatch(addBookAsync({
-        title, author, item_id: () => crypto.randomUUID(), category: 'fictipon',
+        title, author, item_id: 123, category: 'fictipon',
       }));
     } else {
       alert('Fields can not be empty');

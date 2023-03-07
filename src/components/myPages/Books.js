@@ -2,27 +2,25 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchBooksAsync, removeBook } from '../../redux/features/book/bookSlice';
+import { fetchBooksAsync, removeBook, removeBookAsync } from '../../redux/features/book/bookSlice';
 import AddBookForm from '../AddBookForm';
 
 export default function Books() {
   const { books } = useSelector((state) => {
+    console.log('booksObj: ', state.books);
     const bookArray = Object.values(state.books);
     const flattBooks = bookArray.flat();
+    console.log('flat: ', flattBooks);
     return { books: flattBooks };
   });
   const dispatch = useDispatch();
 
-  console.log(books);
-
   useEffect(() => {
     dispatch(fetchBooksAsync());
-    console.log(books);
   }, [dispatch]);
 
   const handleRemove = (bookId) => {
-    dispatch(removeBook(bookId));
-    console.log(bookId);
+    dispatch(removeBookAsync(bookId));
   };
 
   return (
@@ -33,6 +31,10 @@ export default function Books() {
             {book.title}
             {' '}
             <button type="button" onClick={() => handleRemove(book.id)}>Remove</button>
+            <span>
+              {book.id}
+              ...
+            </span>
           </li>
         ))}
       </ul>

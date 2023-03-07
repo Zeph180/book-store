@@ -1,22 +1,23 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable import/no-extraneous-dependencies */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const BASE_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/AAOdRekzcoJXQM6OxIM5';
 
-fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps', {
-  method: 'POST',
-  body: JSON.stringify({
-    title: 'foo',
-    body: 'bar',
-    userId: 1,
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-})
-  .then((res) => res.json())
-  .then(console.log);
+// fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/books', {
+//   method: 'POST',
+//   body: JSON.stringify({
+//     title: 'foo',
+//     body: 'bar',
+//     userId: 1,
+//   }),
+//   headers: {
+//     'Content-type': 'application/json; charset=UTF-8',
+//   },
+// })
+//   .then((res) => res.json())
+//   .then(console.log);
 
 export const fetchBooksAsync = createAsyncThunk('books/fetchBooks', async () => {
   const resp = await axios.get(`${BASE_URL}/books`);
@@ -31,25 +32,18 @@ export const addBookAsync = createAsyncThunk('books/addBook', async (bookData) =
 });
 
 export const removeBookAsync = createAsyncThunk('books/removeBook', async (bookId) => {
-  await axios.delete(`${BASE_URL}/books/${bookId}`);
-  return bookId;
+  console.log('bookId:', bookId); // Check if bookId is defined
+  const resp = await axios.delete(`${BASE_URL}/books/${bookId}`);
+  console.log('resp:', resp.data); // Check the response from the API
+  return resp.data;
 });
 
 export const bookSlice = createSlice({
   name: 'books',
   initialState: {
-    books: [
-      {
-        title: 'eueueueu',
-      },
-    ],
+    booksData: [],
   },
-  reducers: {
-    removeBook: (state, action) => {
-      const bookId = action.payload;
-      return state.books.filter((book) => book.item_id !== bookId);
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchBooksAsync.fulfilled, (state, action) => action.payload)
@@ -58,7 +52,8 @@ export const bookSlice = createSlice({
       })
       // eslint-disable-next-line arrow-body-style
       .addCase(removeBookAsync.fulfilled, (state, action) => {
-        return state.filter((book) => book.id !== action.payload);
+        console.log(action.payload);
+        state.booksData = state.booksData.filter((book) => book.id !== action.payload);
       });
   },
 });
