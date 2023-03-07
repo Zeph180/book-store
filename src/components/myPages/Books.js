@@ -1,44 +1,44 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable import/no-extraneous-dependencies */
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchBooksAsync, removeBook, removeBookAsync } from '../../redux/features/book/bookSlice';
+import Book from '../Book';
 import AddBookForm from '../AddBookForm';
+import { fetchBooksAsync } from '../../redux/features/book/bookSlice';
 
-export default function Books() {
-  const { books } = useSelector((state) => {
-    console.log('booksObj: ', state.books);
-    const bookArray = Object.values(state.books);
-    const flattBooks = bookArray.flat();
-    console.log('flat: ', flattBooks);
-    return { books: flattBooks };
-  });
+const Books = () => {
+  const { books, isLoading } = useSelector((state) => state.books);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchBooksAsync());
   }, [dispatch]);
 
-  const handleRemove = (bookId) => {
-    dispatch(removeBookAsync(bookId));
-  };
+  let output;
+  if (isLoading) output = <h4>Loading...</h4>;
+
+  if (books?.length > 0) {
+    output = books.map((indexx) => (
+      <Book
+        key={indexx.item_id}
+        id={indexx.item_id}
+        title={indexx.title}
+        author={indexx.author}
+        category={indexx.category}
+      />
+    ));
+  }
+
+  if (!isLoading && books?.length === 0) {
+    output = <h4>No books available, Please add book</h4>;
+  }
 
   return (
     <>
-      <ul>
-        {books.map((book) => (
-          <li key={book.id}>
-            {book.title}
-            {' '}
-            <button type="button" onClick={() => handleRemove(book.id)}>Remove</button>
-            <span>
-              {book.id}
-              ...
-            </span>
-          </li>
-        ))}
-      </ul>
+      <div className="row">
+        <ul className="books-list">{output}</ul>
+      </div>
       <AddBookForm />
     </>
   );
-}
+};
+
+export default Books;
