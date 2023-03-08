@@ -1,0 +1,49 @@
+nav {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 3rem;
+  margin: 0 0 2.375rem;
+}
+
+.logo {
+  width: 15rem;
+  font-family: Montserrat;
+  font-size: 1.875rem;
+  color: #0290ff;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  display: inline;
+  margin-right: 10px;
+}
+
+.nav-links {
+  font-family: Montserrat;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  margin-right: 40px;
+  text-decoration: none;
+}
+
+
+.usr-icon-cont {
+  margin: 8px;
+  width: 16px;
+  height: 16px;
+  padding: 10px;
+  border: solid 1px #e8e8e8;
+  border-radius: 30px;
+  margin-left: 20%;
+}
+
+.icon {
+  color: blue;
+}
