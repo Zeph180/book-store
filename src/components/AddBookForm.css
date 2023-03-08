@@ -1,0 +1,55 @@
+.hr {
+  width: 90%;
+  margin-left: 2%;
+  margin-top:  30px ;
+  border-bottom: 2px solid #e8e8e8;
+}
+
+.form-head {
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #888;
+  letter-spacing: -0.18px;
+  margin-left: 5%;
+}
+
+form {
+  width: 90%;
+  margin-left: 5%;
+}
+
+form > * {
+  margin-left: 20px;
+}
+
+input {
+  height: 1.5rem;
+  border-radius: 4px;
+  width: 30%;
+  border: solid 1px #fff;
+  font-size: 1rem;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+form :nth-child(1) {
+  width: 40%;
+}
+
+.cat-input {
+  height: 3rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 20%;
+}
+
+.submit-btn {
+  height: 3rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 20%;
+  color: #fff;
+  background-color: #0290ff;
+  border: solid 1px #fff;
+}

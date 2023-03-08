@@ -1,13 +1,16 @@
 nav {
   display: flex;
   align-items: center;
-  width: 90%;
+  width: 100%;
   height: 3rem;
-  margin: 0 0 2.375rem;
+  padding-left: 5%;
+  padding-right: 8%;
+  box-sizing: border-box;
+  background-color: #fff;
 }
 
 .logo {
-  width: 15rem;
+  width: 400px;
   font-family: Montserrat;
   font-size: 1.875rem;
   color: #0290ff;
@@ -18,6 +21,12 @@ nav {
   letter-spacing: normal;
   display: inline;
   margin-right: 10px;
+}
+
+nav div {
+  width: 100%;
+  height: 50px;
+  margin-top: 30px;
 }
 
 .nav-links {
@@ -41,9 +50,9 @@ nav {
   padding: 10px;
   border: solid 1px #e8e8e8;
   border-radius: 30px;
-  margin-left: 20%;
+  float: right;
 }
 
 .icon {
-  color: blue;
+  color: #0290ff;
 }
