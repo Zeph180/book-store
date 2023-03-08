@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
 .book-cont {
   /* background-color: #e8e8e8; */
   margin-bottom: 10px;
@@ -5,10 +8,9 @@
   width: 90%;
   height: 10.625rem;
   border-radius: 4px;
-  border: solid 1px var(--white);
   display: flex;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #fff;
   justify-content: space-between;
   border: solid 1px #e8e8e8;
 }
@@ -18,7 +20,7 @@
   height: 1.125rem;
   margin: 0 2.438rem 0 0;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.875rem;
   font-weight: bold;
 }
@@ -26,7 +28,7 @@
 .title {
   width: 12.313rem;
   height: 1.813rem;
-  font-family: RobotoSlab;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.375rem;
 }
 
@@ -34,7 +36,7 @@
   width: 5.813rem;
   height: 1.188rem;
   margin: 0.25rem 0.875rem 0 0;
-  font-family: RobotoSlab;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   color: #4386bf;
@@ -47,7 +49,7 @@
 
 .interact-btn {
   height: 1.188rem;
-  font-family: RobotoSlab;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   color: #4386bf;
@@ -89,13 +91,12 @@
 .txt-cont p {
   margin: 0;
   color: #121212;
-  font-family: Montserrat;
-
+  font-family: 'Montserrat', sans-serif;
 }
 
 .chapters-sec {
   width: 30%;
-  display: flex; 
+  display: flex;
 }
 
 .line {
@@ -108,15 +109,14 @@
 
 .chapter-sec-head {
   opacity: 0.5;
-  font-family: RobotoSlab;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.813rem;
   font-weight: 300;
   color: #121212;
 }
 
 .chapter {
-  color: red;
-  font-family: RobotoSlab;
+  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
@@ -127,8 +127,8 @@
 .update-progress {
   background-color: #0290ff;
   border: none;
-  color: #ffffff;
-  font-family: RobotoSlab;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.813rem;
   font-weight: 300;
 }

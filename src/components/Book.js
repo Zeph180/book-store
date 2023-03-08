@@ -62,7 +62,7 @@ const Book = (props) => {
         <div className="line" />
         <div>
           <span className="chapter-sec-head">Current Chapter</span>
-          <p className="chapter">Chapter 5kkk</p>
+          <p className="chapter">Chapter 5</p>
           <button type="button" className="update-progress">
             Update progress
           </button>
