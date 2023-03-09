@@ -2,6 +2,11 @@
 
 body {
   background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+}
 
-  /* margin-left: 5%; */
+.books-list {
+  padding: 0;
+  margin-left: 8%;
 }

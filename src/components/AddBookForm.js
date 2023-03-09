@@ -46,7 +46,7 @@ const Form = () => {
           className="title-input"
           required
         />
-        {/* <input
+        <input
           type="text"
           placeholder="Author's Name"
           name="author"
@@ -56,7 +56,7 @@ const Form = () => {
           value={author}
           className="author-input"
           required
-        /> */}
+        />
         <select
           name="category"
           id="category"
