@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
 
 .book-cont {
-  /* background-color: #e8e8e8; */
   margin-bottom: 10px;
   padding-left: 10px;
   width: 90%;
@@ -47,6 +46,10 @@
   border-left: 1px solid #e8e8e8;
 }
 
+.interact-btns-cont :nth-child(1) {
+  padding-left: 0;
+}
+
 .interact-btn {
   height: 1.188rem;
   font-family: 'Roboto', sans-serif;
@@ -54,6 +57,7 @@
   font-weight: 300;
   color: #4386bf;
   border: none;
+  margin-top: 10px;
   margin-right: 5px;
   background-color: #fff;
 }
