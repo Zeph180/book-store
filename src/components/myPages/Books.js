@@ -36,6 +36,7 @@ const Books = () => {
       <div className="row">
         <ul className="books-list">{output}</ul>
       </div>
+      <div className="hr" />
       <AddBookForm />
     </>
   );
