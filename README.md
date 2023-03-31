@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h3><b>Math Magician</b></h3>
+  <h3><b>BOOK STORE</b></h3>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -30,13 +30,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Math Magician <a name="about-project"></a>
+# 📖 Book store <a name="about-project"></a>
 
-**Math magicians**  is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to:
-
-Make simple calculations. <br>
-Read a random math-related quote.
-
+**Book store** Book store is a simple project built with react and redux that enable users to add books to the list
+ <br>
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -53,9 +50,9 @@ Read a random math-related quote.
 
 ### Key Features <a name="key-features"></a>
 
-- **Make simple calculations**
-- **Read a random math-related quote.**
-- **Home page**
+- **List  books**
+- **Add books**
+- **Remove books**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -93,7 +90,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone git@github.com:zeph180/math-magician.git
+  git clone git@github.com:zeph180/book-store.git
 ```
 
 ### Install
@@ -163,8 +160,7 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Calculator]**
-- [ ] **[Quotes generator]**
+- [ ] **[View category]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
